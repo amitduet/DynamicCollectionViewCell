@@ -89,11 +89,10 @@
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-        CGSize calCulateSizze =[(NSString*)[_categoryList objectAtIndex:indexPath.row] sizeWithAttributes:NULL];
-        calCulateSizze.width = calCulateSizze.width+50;
-        calCulateSizze.height = 50;
-        return calCulateSizze;
+        CGSize calCulateSize =[(NSString*)[_categoryList objectAtIndex:indexPath.row] sizeWithAttributes:NULL];
+        calCulateSize.width = calCulateSize.width+50; // for better look we add more 50 pixel
+        calCulateSize.height = 50; // fixed height
+        return calCulateSize;
         
 }
 
